@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+{% block title %}Change champ{% endblock title %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h2>Change champ</h2>
+<form method="post" class="uniForm">
+  {% csrf_token %}
+  {{ form|crispy }}
+  <input type="submit" value="SAVE" id="update_list">
+</form>
+{% endblock content %}
